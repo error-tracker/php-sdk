@@ -2,7 +2,16 @@
 
 The core Error Tracker SDK for [PHP](https://php.net). This library is for
 interacting with the Error Tracker API with PHP. You can also use this package
-for registering a error handler for a vanilla PHP app.
+for registering an error handler for a vanilla PHP app.
+
+## Who is this for?
+
+-   Developers who need a universal view of errors and bugs - before their
+    client or users complain.
+-   Developers who need raw access to the API so you can report your own errors.
+-   Those using a native PHP application and need to register an error handler.
+-   Developers creating a third party plug-in for an unsupported PHP framework.
+-   QA / Testers who need an overall knowledge of errors across multiple systems
 
 ## Installation
 
@@ -33,12 +42,11 @@ $client->report([
 ]);
 ```
 
-
 ## The Error Handler
 
-If you are using a vanilla PHP application you can register a error handler to
-catch your errors and sent them straight to Error Tracker. All you need to do
-is create a new instance of the `Handler` class.
+If you are using a vanilla PHP application you can register an error handler to
+catch your errors and sent them straight to Error Tracker. Simply create a new
+instance of the `Handler` class.
 
 ```php
 use ErrorTracker\Handler;
@@ -46,7 +54,7 @@ use ErrorTracker\Handler;
 new Handler('MY_APP_KEY');
 ```
 
-You can disable and enable sending errors with the `enabled` property of the
+Disable and enable sending errors with the `enabled` property of the
 `Handler` class
 
 ```php
@@ -59,7 +67,7 @@ $handler->enabled = false;
 $handler->enabled = true;
 ```
 
-You can unregister the handlers with the `unregister` function
+Unregister the handlers by using the `unregister` function
 
 ```php
 $handler->unregister();
@@ -69,37 +77,36 @@ $handler->unregister();
 
 ### Getting set up
 
-Getting getup is quite simple you can clone the repo and run `composer install`.
-Once you have done this you can start hacking.
+Clone the repo and run `composer install`.
+Then start hacking!
 
 ### Testing
 
 All new features of bug fixes must be tested. Testing is with phpunit and can
 be run with the following command
 
-~~~ bash
+```bash
 composer run-script test
-~~~
+```
 
 ### Coding Standards
 
 This library uses psr2 coding standards and `squizlabs/php_codesniffer` for
-linting. There is a composer script setup for linting.
+linting. There is a composer script for this:
 
-~~~ bash
+```bash
 composer run-script lint
-~~~
+```
 
 ### Pull Requests
 
 Before you create a pull request with you changes, the pre-commit script must
-pass. That can be run as follows.
+pass. That can be run as follows:
 
-~~~ bash
+```bash
 composer run-script pre-commit
-~~~
+```
 
 ## Credits
 
 This package is created and maintained by [Practically.io](https://practically.io/)
-
