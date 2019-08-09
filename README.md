@@ -17,7 +17,7 @@ for registering an error handler for a vanilla PHP app.
 
 You can install this package with composer.
 
-```php
+```bash
 composer require erorr-traker/php-sdk
 ```
 
@@ -37,7 +37,7 @@ $client = new Client('APP_KEY');
 
 ```php
 $client->report([
-    'name' => 'The error name'm
+    'name' => 'The error name',
     'text' => 'A message about the error'
 ]);
 ```
