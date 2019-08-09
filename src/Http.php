@@ -12,7 +12,7 @@ class Http
      *
      * @var string
      */
-    public static $trackerUrl = 'https://api.error-tracker.com';
+    public static $trackerUrl = 'https://app.error-tracker.com';
 
     /**
      * Sends a post request to the error tracker api
